@@ -1,3 +1,5 @@
+<img class="section-emblem" src="../assets/emblem-plugins.png" alt="">
+
 # Write a plugin for PrismR
 
 **PrismR** is the free Plexus monitor — the operator console and daemon. Its daemon embeds

@@ -131,3 +131,11 @@
 @media (prefers-reduced-motion: reduce) {
   .plexus-hero img.octopus, .plexus-hero h1, .plexus-hero p.lede, .plexus-hero .md-button { animation: none; }
 }
+
+/* section emblems — a consistent badge at the top of each section page */
+.section-emblem {
+  display: block; width: 150px; height: auto; margin: .2rem auto 1.4rem;
+  filter: drop-shadow(0 0 18px rgba(255,122,60,.28));
+  animation: floaty 8s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) { .section-emblem { animation: none; } }

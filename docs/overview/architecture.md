@@ -1,3 +1,5 @@
+<img class="section-emblem" src="../assets/emblem-architecture.png" alt="">
+
 # Architecture
 
 Plexus is a platform, not a single tool. A clean separation runs through everything:

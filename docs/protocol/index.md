@@ -1,3 +1,5 @@
+<img class="section-emblem" src="../assets/emblem-protocol.png" alt="">
+
 # The Plexus Bus
 
 The **Plexus Bus** is the protocol at the heart of everything — the nervous system that
