@@ -41,8 +41,8 @@
   border-bottom: 1px solid var(--plexus-line); overflow: hidden;
 }
 .plexus-hero img.octopus {
-  width: 176px; height: auto; margin-bottom: 1.1rem;
-  filter: drop-shadow(0 0 30px rgba(255,122,60,.45));
+  width: min(460px, 84%); height: auto; margin: -1rem auto .4rem;
+  filter: drop-shadow(0 0 22px rgba(255,122,60,.30));   /* real transparent PNG now */
 }
 .plexus-hero h1 {
   font-size: 2.7rem; line-height: 1.1; font-weight: 800; margin: 0 0 .6rem;
@@ -98,3 +98,13 @@
 
 /* tables + inline code get a warm keyline */
 .md-typeset table:not([class]) th { border-bottom: 2px solid var(--plexus-orange); }
+
+/* ── Warm the top of every page (the orange hint, site-wide) ──────────────── */
+.md-main {
+  background:
+    radial-gradient(1100px 320px at 50% -150px, rgba(255,122,60,.11), transparent 70%),
+    linear-gradient(180deg, rgba(43,182,201,.05) 0, transparent 460px);
+}
+/* gradient keyline under the header */
+.md-header { border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, var(--plexus-orange), var(--plexus-teal)) 1; }

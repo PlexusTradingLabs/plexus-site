@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {% if page and page.is_homepage %}
+    {% set og_title = "Plexus — distributed intelligence for the futures market" %}
+  {% elif page and page.title %}
+    {% set og_title = page.title ~ " — Plexus" %}
+  {% else %}
+    {% set og_title = "Plexus" %}
+  {% endif %}
+  {% set og_image = "https://plexuslabs.dev/assets/og-octopus.png" %}
+  <meta name="author" content="Plexus Trading Labs">
+  <meta name="keywords" content="AI trading, algorithmic trading, futures, trading protocol, NinjaTrader, MetaTrader, machine learning trading, open source trading">
+  <meta name="description" content="{{ config.site_description }}">
+
+  <!-- Open Graph (Facebook, LinkedIn, Discord, …) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Plexus">
+  <meta property="og:title" content="{{ og_title }}">
+  <meta property="og:description" content="{{ config.site_description }}">
+  <meta property="og:image" content="{{ og_image }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Plexus — an octopus whose prism head refracts the market into a decision">
+  {% if page %}<meta property="og:url" content="{{ page.canonical_url }}">{% endif %}
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ og_title }}">
+  <meta name="twitter:description" content="{{ config.site_description }}">
+  <meta name="twitter:image" content="{{ og_image }}">
+  <meta name="theme-color" content="#ff7a3c">
+{% endblock %}

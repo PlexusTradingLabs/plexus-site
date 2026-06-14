@@ -5,7 +5,7 @@ hide:
 ---
 
 <div class="plexus-hero" markdown>
-<img class="octopus" src="assets/octopus-mark.svg" alt="Plexus octopus mark">
+<img class="octopus" src="assets/octopus-hero.png" alt="Plexus — an octopus whose prism head refracts the market into a decision">
 
 # Distributed intelligence for the futures market
 

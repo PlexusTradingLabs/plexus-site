@@ -5,8 +5,9 @@ copyright: © 2026 Plexus Trading Labs
 
 theme:
   name: material
-  logo: assets/plexus-mark.svg
-  favicon: assets/plexus-mark.svg
+  custom_dir: overrides
+  logo: assets/octopus-mark.svg
+  favicon: assets/octopus-mark.svg
   palette:
     scheme: slate
     primary: black
