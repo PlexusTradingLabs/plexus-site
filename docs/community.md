@@ -1,3 +1,5 @@
+![](assets/emblem-community.png){ .section-emblem }
+
 # Community
 
 Plexus is built in the open because we love this stuff and we want the whole trading
@@ -24,6 +26,15 @@ as the platform is carved into clean, independent projects, so a few links below
 ## Get involved
 
 <div class="grid cards" markdown>
+
+-   :fontawesome-brands-discord:{ .lg .middle } **Discord**
+
+    ---
+
+    Chat protocol, share plugins, swap strategies, and get help — our community Discord is
+    launching soon.
+
+    [:octicons-arrow-right-24: Join the Discord (coming soon)](#)
 
 -   :material-message-question:{ .lg .middle } **Discussions**
 

@@ -1,6 +1,6 @@
 site_name: Plexus
 site_url: https://plexuslabs.dev
-site_description: An open protocol for AI trading strategies — distributed intelligence for the futures market.
+site_description: Open protocol for AI and algorithmic trading strategies — high-frequency trading (HFT), order-flow analysis, and machine-learning automation across futures, CFD, FX and crypto markets.
 copyright: >
   © 2026 Plexus Trading Labs ·
   <a href="https://github.com/PlexusTradingLabs">GitHub</a> ·
@@ -64,4 +64,6 @@ nav:
       - The Plexus Bus: protocol/index.md
   - PrismR:
       - Write a plugin: prismr/plugins.md
+  - Connect:
+      - Trade clients: connect/index.md
   - Community: community.md

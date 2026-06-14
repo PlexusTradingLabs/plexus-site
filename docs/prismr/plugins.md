@@ -4,13 +4,23 @@
 
 **PrismR** is the free Plexus monitor — the operator console and daemon. Its daemon embeds
 a Python interpreter and acts as a **general-purpose plugin host**, so you can write a
-Python module that taps straight into the live bus: forecasting, ML, or your own logic.
+Python module that taps straight into the live bus: forecasting, machine learning, trading
+signals, or your own algorithmic strategy logic.
 
 !!! tip "This is the open builder path"
     You get the bus, dispatch, caching, and persistence for free from the Rust host. You
     write only your logic. It's real — and deliberately the entry-level path. For proven,
     production edge, the sealed **Axon** models live at
     [PlexusTraders.com](https://plexustraders.com).
+
+## Built in Python, reforged in Rust
+
+PRISM began life as a Python engine — fast to prototype, quick to prove. Once the ideas were
+battle-tested in live markets, we **rewrote the core in Rust** for high-speed, low-latency
+processing and rock-solid reliability under real trading load. But we kept what made it
+flexible: PRISM **embeds a Python interpreter**, so the entire plugin ecosystem stays in the
+language data scientists and quants already use — Rust speed where it counts, Python
+ergonomics where you build.
 
 ## The plugin contract
 
@@ -37,7 +47,7 @@ class MyForecaster:
 
     def describe(self):                         # optional — powers the console panel
         from prism_host import ModuleInfo, Stat
-        return ModuleInfo(status="LOADED", stats=[Stat("model", lambda: "chronos-bolt")])
+        return ModuleInfo(status="LOADED", stats=[Stat("model", lambda: "forecaster-v1")])
 ```
 
 The host hands you three bus hooks plus caching/persistence:
@@ -69,10 +79,10 @@ sequenceDiagram
 
 ## Tutorial: a forecasting plugin
 
-A complete worked example — a time-series forecasting plugin using a public model
-(Amazon's Chronos-Bolt) — is coming as the first end-to-end guide. It registers a
-`forecast` RPC, caches via the host, and returns a p10/p50/p90 cone you can render in the
-console.
+A complete worked example — a small **forecaster** plugin that turns recent bars into a
+probabilistic price cone — is coming as the first end-to-end guide. It registers a
+`forecast` RPC, caches through the host, and returns a p10/p50/p90 cone you can render
+right in the console. *(Full walkthrough coming soon.)*
 
 <hr class="prism-rule">
 

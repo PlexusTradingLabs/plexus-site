@@ -2,8 +2,9 @@
 
 # Architecture
 
-Plexus is a platform, not a single tool. A clean separation runs through everything:
-the **open** framework that anyone can read and build on, and the **closed** intelligence
+Plexus is a platform for **Artificial Intelligence (AI)** trading — not a single tool. A
+clean separation runs through everything: the **open** framework that any developer or
+algorithmic trader can read and build on, and the **closed** machine-learning intelligence
 that is the product.
 
 ## The open on-ramp, the premium engine
@@ -16,16 +17,16 @@ flowchart TB
     BUS --> PLG[PrismR Python plugins]
   end
   subgraph CLOSED["🔴 Premium · plexustraders.com — the Axon models"]
-    ML[ml-shared<br/>feature pipelines] --> STR[trained strategies] --> AX[Axon<br/>headless ML client]
+    ML[ml-shared<br/>feature pipelines] --> STR[trained strategies] --> AX[Axon<br/>charting + ML platform]
   end
   PLG -.->|"want proven edge?"| CLOSED
 ```
 
 Everything connects through the open bus contract, with **PRISM** as the brain at the
 center — every trade client branches from it. You can build, connect, and verify entirely
-on the open side. The premium, sealed **Axon** engine — our proprietary headless trade
-client with a built-in ML engine — is the defensible moat, and lives behind
-[PlexusTraders.com](https://plexustraders.com).
+on the open side. The premium, sealed **Axon** engine — our proprietary headless
+**charting & ML platform**, where our strategies and models run and backtest — is the
+defensible moat, and lives behind [PlexusTraders.com](https://plexustraders.com).
 
 ## What's open vs. premium
 
@@ -50,15 +51,15 @@ flowchart LR
   P --> MT["MetaTrader"]
   P --> QT["QuantTower"]
   P --> API["Direct API / CFDs"]
-  P --> AX["Axon · our headless ML client"]
 ```
 
 ## From Python to Rust
 
 We perfected the platform in-house on a Python stack — the PRISM coordinator plus the
-**Ammonita** engine — and that's what we trade on today. The Rust rewrite (PRISM + the
-sealed **Axon** engine) is the next level: roughly **10× the throughput**, with the low
-latency high-frequency order-flow trading demands.
+**Ammonita** engine — running everything from **backtesting** to live signal detection, and
+that's what we trade on today. The Rust rewrite (PRISM + the sealed **Axon** engine) is the
+next level: roughly **10× the throughput**, with the low latency that **high-frequency
+trading (HFT)** and real-time order-flow execution demand across futures, CFD, FX, and crypto markets.
 
 ---
 

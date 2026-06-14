@@ -9,9 +9,10 @@ hide:
 
 # Distributed intelligence for the futures market
 
-<p class="lede">Plexus is an open protocol for AI trading strategies. Like an octopus, the
-intelligence isn't locked in one head — it flows through a living network to every arm:
-the market is read, refracted into a decision, and fired out to your trading platform.</p>
+<p class="lede">Plexus is an open protocol for AI and algorithmic trading strategies. Like an
+octopus, the intelligence isn't locked in one head — it flows through a living network to
+every arm: the market is read, refracted into a decision, and fired out to your trading
+platform.</p>
 
 [Build on Plexus](overview/architecture.md){ .md-button .md-button--primary }
 [Get the AI models →](https://plexustraders.com){ .md-button }
@@ -31,11 +32,10 @@ flowchart LR
   P --> MT["MetaTrader"]
   P --> QT["QuantTower"]
   P --> API["Direct API"]
-  P --> AX["Axon<br/>our headless ML client"]
 ```
 
-*PRISM is the brain at the center — every trade client branches from it over the Plexus
-Bus. Axon is our own premium, headless client (more below).*
+*PRISM is the brain at the center — it reads the market and drives every trade client over
+the Plexus Bus. Our proven models run in the premium **Axon** platform (more below).*
 
 ## Why we open the framework
 
@@ -44,7 +44,7 @@ keep the **alpha** sealed. We're not handing out our winning models; we're givin
 trading community better rails to build on.
 
 - **Contributing to trading.** Real, production-grade infrastructure — an open protocol and
-  tools any developer or trader can build on, not a toy.
+  tools any developer, algorithmic trader, or quant can build on, not a toy.
 - **Helping you win.** Connect your platform, write your own AI plugins, and run them on the
   exact rails we trade on. The framework makes you more capable, for free.
 - **Trust through transparency.** The space is full of black boxes with hidden pricing and
@@ -81,7 +81,7 @@ What stays private is the edge: the sealed **Axon** models at
     Start with NinjaTrader; the engine is platform-agnostic by design. Every new
     platform is the same intelligence reaching a new market.
 
-    [:octicons-arrow-right-24: Architecture](overview/architecture.md)
+    [:octicons-arrow-right-24: Connect a client](connect/index.md)
 
 -   :material-rocket-launch:{ .lg .middle } **Premium Axon models**
 
@@ -94,19 +94,22 @@ What stays private is the edge: the sealed **Axon** models at
 
 </div>
 
-## Built for high-frequency trading
+## Built for high-frequency trading (HFT)
 
-Plexus speaks a custom binary wire protocol. On the hot path it negotiates **MessagePack**
-with a content-addressed schema registry — a market-data bar drops from **~250 bytes of
-JSON to ~40 bytes**, around **80% smaller**. Across a 5-instrument feed at 10 bars/sec that's
-**540 KB → 86 KB per minute**: the bandwidth and latency headroom that order flow and
-high-frequency execution demand. Every message is HMAC-signed, with an optional sealed
-transport for a fully closed bus.
+Plexus speaks a custom binary wire protocol engineered for **high-frequency trading (HFT)**
+and real-time **order-flow** analysis. On the hot path it negotiates **MessagePack** with a
+content-addressed schema registry — a market-data bar drops from **~250 bytes of JSON to
+~40 bytes**, around **80% smaller**. Across a 5-instrument feed at 10 bars/sec that's
+**540 KB → 86 KB per minute**: the bandwidth and low-latency headroom that algorithmic and
+automated trading at HFT speeds demand. Every message is HMAC-signed, with an optional
+sealed transport for a fully closed bus.
 
-We proved the system in-house on a Python stack — the PRISM coordinator plus our **Ammonita**
-engine, which is what we trade on today. The **Rust** rewrite (PRISM + the sealed **Axon**
-engine) is the next level: roughly **10× the throughput**, built for low-latency high-speed
-trading.
+The protocol is **market-agnostic** — the same engine drives **futures, CFD, FX, and crypto**
+markets. We proved it in-house on a Python stack — the PRISM
+coordinator plus our **Ammonita** engine — running everything from **backtesting** to the
+live trading signals we run today. The **Rust** rewrite (PRISM + the sealed **Axon** engine)
+is the next level: roughly **10× the throughput**, built for low-latency, high-frequency
+futures, CFD, and crypto trading.
 
 <hr class="prism-rule">
 
@@ -116,6 +119,9 @@ trading.
 |---|---|---|
 | **Plexus** | the nervous system | the open bus/protocol connecting every component |
 | **PRISM** | the brain | refracts raw, noisy market data into a clear decision |
-| **Axon** | the execution arm | our proprietary headless trade client (like NautilusTrader) with a built-in ML engine — the premium one |
+| **Axon** | the engine | our proprietary headless charting & ML platform — where our strategies and models run and backtest, with full access to charts and market data (premium) |
 
-*The brain decides; the trading platform is just the hand that executes.*
+<div class="tagline">
+  <span class="t-brain">The brain decides.</span> The trading platform is just the
+  <span class="t-hand">hand</span> that executes.
+</div>
