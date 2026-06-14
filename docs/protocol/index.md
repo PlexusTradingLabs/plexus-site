@@ -4,11 +4,14 @@ The **Plexus Bus** is the protocol at the heart of everything — the nervous sy
 carries information between every component instantly. It is the reason a strategy, a
 monitor, and a trade client written in three different languages all speak as one.
 
-!!! note "Single source of truth"
-    The full wire spec (`PROTOCOL.md`) lives in the
-    [`plexus-protocol`](https://github.com/PlexusTradingLabs) repo, next to the golden
-    vectors and the conformance harness that keep all three implementations in parity.
-    This page renders it directly once the docs aggregation lane is wired (Phase 2).
+!!! note "Read the full spec"
+    The complete wire spec — message types, transports, the security seam, encoding
+    negotiation, and the golden conformance vectors — lives in the **plexus-protocol**
+    repository and its wiki, right next to the harness that keeps all three implementations
+    in parity.
+
+    [:material-book-open-variant: Protocol wiki](https://github.com/PlexusTradingLabs/plexus-protocol/wiki){ .md-button } &nbsp;
+    [:fontawesome-brands-github: plexus-protocol repo](https://github.com/PlexusTradingLabs/plexus-protocol){ .md-button }
 
 ## Three implementations, one protocol
 

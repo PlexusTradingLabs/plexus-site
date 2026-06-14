@@ -117,3 +117,17 @@
 .md-content__inner:has(.plexus-hero) { padding-top: 0; }
 .md-content__inner:has(.plexus-hero)::before { content: none; display: none; }
 .md-content__inner:has(.plexus-hero) > .md-content__button { display: none; }
+
+/* ── Polish: footer links, sequence lifelines, gentle motion ──────────────── */
+.md-footer-meta a, .md-footer-copyright a { color: var(--plexus-orange); }
+.mermaid .actor-line, .mermaid line.actor-line { stroke: #34454f !important; }
+
+.plexus-hero img.octopus { animation: floaty 7s ease-in-out infinite; }
+.plexus-hero h1        { animation: rise .7s ease both; }
+.plexus-hero p.lede    { animation: rise .7s ease .08s both; }
+.plexus-hero .md-button{ animation: rise .7s ease .16s both; }
+@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+@keyframes rise   { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .plexus-hero img.octopus, .plexus-hero h1, .plexus-hero p.lede, .plexus-hero .md-button { animation: none; }
+}

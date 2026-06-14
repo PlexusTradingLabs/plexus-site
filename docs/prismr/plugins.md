@@ -47,6 +47,9 @@ The host hands you three bus hooks plus caching/persistence:
 | `host.publish(event)` | publish an event onto the bus |
 | `host.cache_get / cache_put / cache_clear` | namespaced cache + DuckDB persistence |
 
+The full host API and plugin lifecycle reference lives in the
+[prismr-plugin-sdk wiki](https://github.com/PlexusTradingLabs/prismr-plugin-sdk/wiki) *(coming soon)*.
+
 ## How it runs
 
 ```mermaid

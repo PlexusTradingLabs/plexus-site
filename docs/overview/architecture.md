@@ -57,3 +57,8 @@ We perfected the platform in-house on a Python stack — the PRISM coordinator p
 **Ammonita** engine — and that's what we trade on today. The Rust rewrite (PRISM + the
 sealed **Axon** engine) is the next level: roughly **10× the throughput**, with the low
 latency high-frequency order-flow trading demands.
+
+---
+
+**Explore the open repositories →** every component above has its own repo and wiki, listed
+on the [Community](../community.md#repositories-wikis) page.

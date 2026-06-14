@@ -30,4 +30,25 @@
   <meta name="twitter:description" content="{{ config.site_description }}">
   <meta name="twitter:image" content="{{ og_image }}">
   <meta name="theme-color" content="#ff7a3c">
+
+  <!-- Structured data (rich results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Plexus Trading Labs",
+    "url": "https://plexuslabs.dev",
+    "logo": "https://plexuslabs.dev/assets/octopus-mark.svg",
+    "description": "An open protocol for AI trading strategies for the futures market.",
+    "sameAs": ["https://github.com/PlexusTradingLabs"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Plexus",
+    "url": "https://plexuslabs.dev"
+  }
+  </script>
 {% endblock %}

@@ -1,7 +1,10 @@
 site_name: Plexus
 site_url: https://plexuslabs.dev
 site_description: An open protocol for AI trading strategies — distributed intelligence for the futures market.
-copyright: © 2026 Plexus Trading Labs
+copyright: >
+  © 2026 Plexus Trading Labs ·
+  <a href="https://github.com/PlexusTradingLabs">GitHub</a> ·
+  <a href="https://plexustraders.com">Plexus Traders ↗</a>
 
 theme:
   name: material
@@ -48,6 +51,10 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/PlexusTradingLabs
+      name: Plexus on GitHub
+    - icon: material/rocket-launch
+      link: https://plexustraders.com
+      name: Plexus Traders
 
 nav:
   - Home: index.md
