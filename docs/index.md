@@ -7,7 +7,7 @@ hide:
 <div class="plexus-hero" markdown>
 <img class="octopus" src="assets/octopus-hero.png" alt="Plexus — an octopus whose prism head refracts the market into a decision">
 
-# Distributed intelligence for the futures market
+# Distributed intelligence for AI-driven trading
 
 <p class="lede">Plexus is an open protocol for AI and algorithmic trading strategies. Like an
 octopus, the intelligence isn't locked in one head — it flows through a living network to
