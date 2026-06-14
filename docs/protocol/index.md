@@ -1,4 +1,4 @@
-<img class="section-emblem" src="../assets/emblem-protocol.png" alt="">
+![](../assets/emblem-protocol.png){ .section-emblem }
 
 # The Plexus Bus
 

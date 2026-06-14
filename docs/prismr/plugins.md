@@ -1,4 +1,4 @@
-<img class="section-emblem" src="../assets/emblem-plugins.png" alt="">
+![](../assets/emblem-plugins.png){ .section-emblem }
 
 # Write a plugin for PrismR
 

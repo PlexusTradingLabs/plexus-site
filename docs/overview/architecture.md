@@ -1,4 +1,4 @@
-<img class="section-emblem" src="../assets/emblem-architecture.png" alt="">
+![](../assets/emblem-architecture.png){ .section-emblem }
 
 # Architecture
 
