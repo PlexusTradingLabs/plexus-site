@@ -1,0 +1,29 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plexus octopus">
+  <!-- Geometric octopus: prism-head brain + 8 tentacles (the trade clients it reaches). -->
+  <defs>
+    <linearGradient id="arm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff9a5c"/>
+      <stop offset="1" stop-color="#e0492b"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#arm)" stroke-width="3.3" stroke-linecap="round">
+    <path d="M50 62 C 50 78, 40 84, 31 92"/>
+    <path d="M50 62 C 50 80, 60 86, 69 92"/>
+    <path d="M41 59 C 29 71, 21 71, 11 79"/>
+    <path d="M59 59 C 71 71, 79 71, 89 79"/>
+    <path d="M38 53 C 22 57, 14 53, 6 59"/>
+    <path d="M62 53 C 78 57, 86 53, 94 59"/>
+    <path d="M43 48 C 31 43, 23 37, 19 27"/>
+    <path d="M57 48 C 69 43, 77 37, 81 27"/>
+  </g>
+  <!-- head / mantle -->
+  <path d="M50 18 C 65 18, 71 32, 67 46 C 63 57, 37 57, 33 46 C 29 32, 35 18, 50 18 Z"
+        fill="#14202a" stroke="#ff9a5c" stroke-width="2.6"/>
+  <!-- prism in the head (refraction → decision) -->
+  <polygon points="50,29 59,45 41,45" fill="none" stroke="#2bb6c9" stroke-width="2"/>
+  <!-- core spark -->
+  <circle cx="50" cy="44" r="3.2" fill="#ff7a3c"/>
+  <!-- eyes -->
+  <circle cx="43.5" cy="40" r="1.7" fill="#2bb6c9"/>
+  <circle cx="56.5" cy="40" r="1.7" fill="#2bb6c9"/>
+</svg>

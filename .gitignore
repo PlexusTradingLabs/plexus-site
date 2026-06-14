@@ -1,0 +1,14 @@
+# build output
+site/
+
+# secrets — never commit (key lives in the workspace .env, outside this repo)
+.env
+*.key
+
+# python / tooling
+__pycache__/
+.venv/
+venv/
+.DS_Store
+.playwright-mcp/
+*.png.tmp

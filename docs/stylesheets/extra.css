@@ -1,0 +1,100 @@
+/* ── Plexus brand palette — an octopus in the deep (orange on ocean) ───────── */
+:root {
+  --plexus-bg:     #0c1418;  /* deep ocean base          */
+  --plexus-panel:  #13202a;  /* surfaces / cards         */
+  --plexus-line:   #213441;  /* borders                  */
+  --plexus-text:   #d7e1ea;
+  --plexus-muted:  #8aa0ad;
+  --plexus-orange: #ff7a3c;  /* octopus — PRIMARY        */
+  --plexus-coral:  #ff5a36;
+  --plexus-rust:   #e0492b;  /* deep core                */
+  --plexus-teal:   #2bb6c9;  /* ocean accent — secondary */
+  --plexus-blue:   #4a90e2;
+  --plexus-green:  #3fb96b;  /* signal "go"              */
+  --plexus-amber:  #d6a14a;
+}
+
+:root, [data-md-color-scheme="slate"] {
+  --md-primary-fg-color:       var(--plexus-orange);
+  --md-primary-fg-color--dark: #d85a1f;
+  --md-accent-fg-color:        var(--plexus-coral);
+}
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color:        var(--plexus-bg);
+  --md-default-bg-color--light: var(--plexus-panel);
+  --md-code-bg-color:           #0a1115;
+  --md-default-fg-color:        var(--plexus-text);
+  --md-typeset-a-color:         var(--plexus-orange);
+}
+
+/* readable content column */
+.md-content__inner { max-width: 54rem; margin-inline: auto; }
+
+/* ── Hero ─────────────────────────────────────────────────────────────────── */
+.plexus-hero {
+  position: relative; margin: -1.2rem -.8rem 2rem; padding: 4.5rem 1.5rem 4rem;
+  text-align: center;
+  background:
+    radial-gradient(820px 380px at 50% -8%, rgba(255,122,60,.30), transparent 70%),
+    radial-gradient(720px 360px at 82% 8%, rgba(43,182,201,.16), transparent 72%),
+    linear-gradient(180deg, #0b1418 0%, var(--plexus-bg) 100%);
+  border-bottom: 1px solid var(--plexus-line); overflow: hidden;
+}
+.plexus-hero img.octopus {
+  width: 176px; height: auto; margin-bottom: 1.1rem;
+  filter: drop-shadow(0 0 30px rgba(255,122,60,.45));
+}
+.plexus-hero h1 {
+  font-size: 2.7rem; line-height: 1.1; font-weight: 800; margin: 0 0 .6rem;
+  background: linear-gradient(90deg, #ffd9c2, #ff7a3c 55%, #ff5a36);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.plexus-hero p.lede { font-size: 1.12rem; color: var(--plexus-text); max-width: 720px; margin: 0 auto 1.6rem; }
+.plexus-hero .md-button { color: var(--plexus-text); }
+.plexus-hero .md-button--primary { background: var(--plexus-orange); border-color: var(--plexus-orange); color: #18120c; }
+
+/* ── Cards ────────────────────────────────────────────────────────────────── */
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid var(--plexus-line); border-radius: 12px;
+  background: linear-gradient(180deg, var(--plexus-panel), #0f1a22);
+  transition: border-color .2s ease, transform .2s ease;
+}
+.md-typeset .grid.cards > ul > li:hover { border-color: var(--plexus-orange); transform: translateY(-3px); }
+
+/* spectrum divider — the prism motif */
+.prism-rule { height: 3px; border: 0; border-radius: 3px; margin: 2.2rem 0;
+  background: linear-gradient(90deg, #e0492b, #ff7a3c, #d6a14a, #3fb96b, #2bb6c9); }
+
+/* ── Mermaid — dark, orange-forward (teal kept only as ocean accent) ──────── */
+.md-typeset .mermaid { display: flex; justify-content: center; margin: 1.4rem 0; }
+.mermaid .cluster rect { fill: #15212b !important; stroke: var(--plexus-orange) !important; }
+.mermaid .node rect, .mermaid .node polygon, .mermaid .node circle, .mermaid .node path {
+  fill: #16242e !important; stroke: var(--plexus-orange) !important;
+}
+.mermaid .nodeLabel, .mermaid .edgeLabel, .mermaid span.nodeLabel, .mermaid .cluster-label, .mermaid text {
+  color: var(--plexus-text) !important; fill: var(--plexus-text) !important;
+}
+.mermaid .edgeLabel { background: var(--plexus-bg) !important; }
+.mermaid .flowchart-link, .mermaid path.path, .mermaid line { stroke: var(--plexus-orange) !important; }
+.mermaid marker path, .mermaid .arrowheadPath, .mermaid #arrowhead path, .mermaid marker {
+  fill: var(--plexus-orange) !important; stroke: var(--plexus-orange) !important;
+}
+/* sequence diagram */
+.mermaid .actor { fill: #16242e !important; stroke: var(--plexus-orange) !important; }
+.mermaid .actor-line { stroke: var(--plexus-teal) !important; }          /* ocean accent */
+.mermaid .messageText, .mermaid .loopText, .mermaid text.actor { fill: var(--plexus-text) !important; }
+.mermaid .messageLine0, .mermaid .messageLine1 { stroke: var(--plexus-orange) !important; }
+.mermaid .note, .mermaid rect.note { fill: #221409 !important; stroke: var(--plexus-orange) !important; }
+.mermaid .noteText, .mermaid text.noteText, .mermaid .noteText tspan { fill: var(--plexus-text) !important; }
+
+/* ── Admonitions → warm (the blue "note" box becomes orange) ──────────────── */
+.md-typeset .admonition, .md-typeset details {
+  border-color: var(--plexus-line);
+  border-left: 4px solid var(--plexus-orange);
+  background: var(--plexus-panel);
+}
+.md-typeset .admonition-title, .md-typeset summary { background-color: rgba(255,122,60,.12) !important; }
+.md-typeset .admonition-title::before, .md-typeset summary::before { background-color: var(--plexus-orange) !important; }
+
+/* tables + inline code get a warm keyline */
+.md-typeset table:not([class]) th { border-bottom: 2px solid var(--plexus-orange); }
