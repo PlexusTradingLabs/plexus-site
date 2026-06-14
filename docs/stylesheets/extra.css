@@ -32,7 +32,10 @@
 
 /* ── Hero ─────────────────────────────────────────────────────────────────── */
 .plexus-hero {
-  position: relative; margin: -1.2rem -.8rem 2rem; padding: 4.5rem 1.5rem 4rem;
+  position: relative;
+  /* full-bleed: break out of the 54rem content column to span the viewport */
+  margin: 0 calc(50% - 50vw) 2.4rem; max-width: 100vw;
+  padding: 4.5rem 1.5rem 4rem;
   text-align: center;
   background:
     radial-gradient(820px 380px at 50% -8%, rgba(255,122,60,.30), transparent 70%),
@@ -108,3 +111,8 @@
 /* gradient keyline under the header */
 .md-header { border-bottom: 2px solid transparent;
   border-image: linear-gradient(90deg, var(--plexus-orange), var(--plexus-teal)) 1; }
+
+/* home: hero sits flush under the nav tabs (kill the top gap) */
+.md-main__inner:has(.plexus-hero) { margin-top: 0; }
+.md-content__inner:has(.plexus-hero) { padding-top: 0; }
+.md-content__inner:has(.plexus-hero) > .md-content__button { display: none; }
