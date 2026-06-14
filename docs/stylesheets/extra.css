@@ -115,4 +115,5 @@
 /* home: hero sits flush under the nav tabs (kill the top gap) */
 .md-main__inner:has(.plexus-hero) { margin-top: 0; }
 .md-content__inner:has(.plexus-hero) { padding-top: 0; }
+.md-content__inner:has(.plexus-hero)::before { content: none; display: none; }
 .md-content__inner:has(.plexus-hero) > .md-content__button { display: none; }
